@@ -1,0 +1,161 @@
+[
+  {
+    "title": "Python testing setup",
+    "create_time": 1700000000.0,
+    "conversation_id": "conv-branching",
+    "current_node": "n-final",
+    "mapping": {
+      "n-root": {
+        "id": "n-root",
+        "message": null,
+        "parent": null,
+        "children": ["n-sys"]
+      },
+      "n-sys": {
+        "id": "n-sys",
+        "message": {
+          "id": "n-sys",
+          "author": { "role": "system", "name": null, "metadata": {} },
+          "create_time": 1700000001.0,
+          "content": { "content_type": "text", "parts": ["You are ChatGPT."] },
+          "metadata": { "is_visually_hidden_from_conversation": true },
+          "recipient": "all"
+        },
+        "parent": "n-root",
+        "children": ["n-user"]
+      },
+      "n-user": {
+        "id": "n-user",
+        "message": {
+          "id": "n-user",
+          "author": { "role": "user", "name": null, "metadata": {} },
+          "create_time": 1700000010.0,
+          "content": {
+            "content_type": "text",
+            "parts": ["I always use pytest, never unittest. Set up my project that way."]
+          },
+          "metadata": {},
+          "recipient": "all"
+        },
+        "parent": "n-sys",
+        "children": ["n-reply", "n-abandoned"]
+      },
+      "n-abandoned": {
+        "id": "n-abandoned",
+        "message": {
+          "id": "n-abandoned",
+          "author": { "role": "assistant", "name": null, "metadata": {} },
+          "create_time": 1700000020.0,
+          "content": {
+            "content_type": "text",
+            "parts": ["THIS IS AN ABANDONED REGENERATION AND MUST NOT BE PARSED."]
+          },
+          "metadata": {},
+          "recipient": "all"
+        },
+        "parent": "n-user",
+        "children": []
+      },
+      "n-reply": {
+        "id": "n-reply",
+        "message": {
+          "id": "n-reply",
+          "author": { "role": "assistant", "name": null, "metadata": {} },
+          "create_time": 1700000021.0,
+          "content": { "content_type": "text", "parts": ["Sure — pytest it is."] },
+          "metadata": {},
+          "recipient": "all"
+        },
+        "parent": "n-user",
+        "children": ["n-tool"]
+      },
+      "n-tool": {
+        "id": "n-tool",
+        "message": {
+          "id": "n-tool",
+          "author": { "role": "assistant", "name": null, "metadata": {} },
+          "create_time": 1700000022.0,
+          "content": { "content_type": "code", "text": "print('internal tool call')" },
+          "metadata": {},
+          "recipient": "python"
+        },
+        "parent": "n-reply",
+        "children": ["n-final"]
+      },
+      "n-final": {
+        "id": "n-final",
+        "message": {
+          "id": "n-final",
+          "author": { "role": "assistant", "name": null, "metadata": {} },
+          "create_time": 1700000023.0,
+          "content": { "content_type": "text", "parts": ["Created tests/test_app.py."] },
+          "metadata": {},
+          "recipient": "all"
+        },
+        "parent": "n-tool",
+        "children": []
+      }
+    }
+  },
+  {
+    "title": "",
+    "create_time": 1700100000.0,
+    "conversation_id": "conv-no-current-node",
+    "current_node": null,
+    "mapping": {
+      "m-user": {
+        "id": "m-user",
+        "message": {
+          "id": "m-user",
+          "author": { "role": "user", "name": null, "metadata": {} },
+          "create_time": 1700100010.0,
+          "content": {
+            "content_type": "multimodal_text",
+            "parts": [
+              { "content_type": "image_asset_pointer", "asset_pointer": "file-service://x" },
+              "What is in this photo?"
+            ]
+          },
+          "metadata": {},
+          "recipient": "all"
+        },
+        "parent": null,
+        "children": ["m-reply"]
+      },
+      "m-reply": {
+        "id": "m-reply",
+        "message": {
+          "id": "m-reply",
+          "author": { "role": "assistant", "name": null, "metadata": {} },
+          "create_time": 1700100020.0,
+          "content": { "content_type": "text", "parts": ["A cat."] },
+          "metadata": {},
+          "recipient": "all"
+        },
+        "parent": "m-user",
+        "children": []
+      }
+    }
+  },
+  {
+    "title": "System chatter only",
+    "create_time": 1700200000.0,
+    "conversation_id": "conv-empty",
+    "current_node": "e-sys",
+    "mapping": {
+      "e-sys": {
+        "id": "e-sys",
+        "message": {
+          "id": "e-sys",
+          "author": { "role": "system", "name": null, "metadata": {} },
+          "create_time": 1700200001.0,
+          "content": { "content_type": "text", "parts": [""] },
+          "metadata": {},
+          "recipient": "all"
+        },
+        "parent": null,
+        "children": []
+      }
+    }
+  }
+]

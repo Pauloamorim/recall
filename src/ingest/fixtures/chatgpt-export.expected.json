@@ -1,0 +1,43 @@
+[
+  {
+    "id": "conv-branching",
+    "source": "chatgpt",
+    "title": "Python testing setup",
+    "createdAt": "2023-11-14T22:13:20.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "text": "I always use pytest, never unittest. Set up my project that way.",
+        "timestamp": "2023-11-14T22:13:30.000Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Sure — pytest it is.",
+        "timestamp": "2023-11-14T22:13:41.000Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Created tests/test_app.py.",
+        "timestamp": "2023-11-14T22:13:43.000Z"
+      }
+    ]
+  },
+  {
+    "id": "conv-no-current-node",
+    "source": "chatgpt",
+    "title": "Untitled",
+    "createdAt": "2023-11-16T02:00:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "text": "What is in this photo?",
+        "timestamp": "2023-11-16T02:00:10.000Z"
+      },
+      {
+        "role": "assistant",
+        "text": "A cat.",
+        "timestamp": "2023-11-16T02:00:20.000Z"
+      }
+    ]
+  }
+]
