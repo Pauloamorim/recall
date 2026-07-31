@@ -1,0 +1,25 @@
+{
+  "name": "recall",
+  "version": "0.0.0",
+  "description": "Your AI's memory of you, as files you own. Local-first MCP memory server.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "recall": "./dist/cli.js" },
+  "engines": { "node": ">=18" },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "recall": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "commander": "^14.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
